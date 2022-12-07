@@ -69,10 +69,25 @@ public class DemoApplication implements CommandLineRunner {
 					int year = userInput.nextInt();
 					run.saveCyclone(name, year);
 					List<Cyclone> getID = run.getCycID(name);
+					System.out.print("Enter date:");
+					int date = userInput.nextInt();
 					int num = getID.get(0).getId();
 					System.out.print("Enter longitude");
-					//int lat = userInput.nextInt();
+					int lon = userInput.nextInt();
 					System.out.print("Enter Latitude");
+					int lat = userInput.nextInt();
+					System.out.print("Enter wind speed:");
+					int wind = userInput.nextInt();
+					System.out.print("Enter basin name:");
+					String type = userInput.next();
+					System.out.print("Enter cost done:");
+					int cost = userInput.nextInt();
+					System.out.print("Enter deaths:");
+					int death = userInput.nextInt();
+					System.out.print("Enter state affected:");
+					String state = userInput.next();
+					System.out.print("Enter classification for cyclone:");
+					String type2 = userInput.next();
 					break;
 				}
 				else{

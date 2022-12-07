@@ -23,5 +23,11 @@ public class classServiceImpl implements classService {
        
         return classes.findClasses(i);
     }
+
+    @Override
+    public void saveClassi(Classification temp) {
+       classes.save(temp);
+        
+    }
     
 }

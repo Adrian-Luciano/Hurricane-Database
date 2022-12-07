@@ -16,5 +16,11 @@ public class damgeServiceImpl implements damageService{
     public List<Damage> getInfo(int id) {
         return dam.getDamage(id);
     }
+
+    @Override
+    public void saveDam(Damage dame) {
+        dam.save(dame);
+        
+    }
     
 }

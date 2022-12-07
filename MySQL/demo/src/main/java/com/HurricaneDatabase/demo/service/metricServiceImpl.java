@@ -13,4 +13,8 @@ public class metricServiceImpl implements metricService {
     public List<Metrics> getMetrics(int id){
         return metric.getInfo(id);
     }
+    @Override
+    public void saveMetrics(Metrics me) {
+        metric.save(me);
+    }
 }

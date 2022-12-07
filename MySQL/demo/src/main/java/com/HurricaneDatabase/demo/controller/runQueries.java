@@ -48,11 +48,49 @@ public class runQueries {
     public List<Basin> getBasin(){
         return bas.getAll();
     }
+
+    public void saveMetrics(int lon, int lat, int cycID, int wind, int date)
+    {
+        Metrics me = new Metrics();
+        me.setCycID(cycID);
+        me.setDate(date);
+        me.setLat(lat);
+        me.setLong(lon);
+        me.setWind(wind);
+        metric.saveMetrics(me);
+    }
+
+    public void saveDamage(int cost, int death, int id){
+    Damage dam = new Damage();
+    dam.setCost(cost);
+    dam.setDeath(death);
+    dam.setId(id);
+    damage.saveDam(dam);
+    }
     public void saveCyclone(String name, int year){
         Cyclone temp = new Cyclone();
         temp.setName(name);
         temp.setYear(year);
         cyc.saveCyc(temp);
+    }
+    public void saveBasin(int id, String name){
+        Basin b = new Basin();
+        b.setCycID(id);
+        b.setName(name);
+        bas.saveBasin(b);
+    }
+    public void saveState(int id, String name){
+        States st = new States();
+        st.setCycId(id);
+        st.setName(name);
+        state.saveState(st);
+        
+    }
+    public void saveClassification(String name, int id){
+        Classification temp = new Classification();
+        temp.setName(name);
+        temp.setCycID(id);
+        classi.saveClassi(temp);
     }
     public List<Cyclone> getCycID(String name){
         return cyc.findByName(name);
@@ -72,8 +110,7 @@ public class runQueries {
         System.out.print(" |Longitude: " + stats.get(0).getLon());
         System.out.print(" |Wind speed: " + stats.get(0).getWind());
         System.out.print(" |longitude: " + stats.get(0).getLon());
-        System.out.print(" |date:  " + stats.get(0).getDate());
-        System.out.println(" |classification: " + stats.get(0).getClassi() + "|");
+        System.out.println(" |date:  " + stats.get(0).getDate()+ "|");
         }
     }
 

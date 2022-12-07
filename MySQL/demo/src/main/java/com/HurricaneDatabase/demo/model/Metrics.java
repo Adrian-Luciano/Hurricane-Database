@@ -15,7 +15,6 @@ public class Metrics {
     private int wind;
     private int lat;
     private int lon;
-    private String classi;
 
     public int getId() {
         return id;
@@ -60,10 +59,4 @@ public class Metrics {
         this.lon = lon;
     }
 
-    public void setClassi(String classi) {
-        this.classi = classi;
-    }
-    public String getClassi() {
-        return classi;
-    }
 }

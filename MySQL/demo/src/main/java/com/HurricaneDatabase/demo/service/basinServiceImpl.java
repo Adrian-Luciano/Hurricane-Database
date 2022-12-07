@@ -18,4 +18,9 @@ public class basinServiceImpl implements basinService{
     public List<Basin> getBasin(int i) {
         return basin.getBasin(i);
     }
+    @Override
+    public void saveBasin(Basin temo) {
+      basin.save(temo);
+        
+    }
 }

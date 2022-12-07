@@ -15,5 +15,10 @@ public class stateServiceImpl implements stateService{
     public List<States> affectedStates(int id) {
         return state.getInfo(id);
     }
+    @Override
+    public void saveState(States st) {
+        state.save(st);
+        
+    }
     
 }

@@ -5,4 +5,5 @@ import java.util.List;
 public interface basinService {
     public List<Basin> getAll();
     public List<Basin> getBasin(int i);
+    public void saveBasin(Basin temp);
 }

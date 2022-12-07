@@ -5,4 +5,5 @@ import java.util.List;
 
 public interface damageService {
     public List<Damage> getInfo(int id);
+    public void saveDam(Damage dame);
 }

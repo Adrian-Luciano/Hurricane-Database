@@ -5,4 +5,6 @@ import java.util.List;
 
 public interface metricService {
     List<Metrics> getMetrics(int id);
+    public void saveMetrics(Metrics me);
+    
 }

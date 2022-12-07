@@ -5,4 +5,5 @@ import java.util.List;
 
 public interface stateService {
     public List<States> affectedStates(int id);
+    public void saveState(States st);
 }
